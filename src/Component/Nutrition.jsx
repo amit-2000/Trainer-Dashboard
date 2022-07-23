@@ -33,7 +33,7 @@ export default class Nutrition extends Component {
             data-tip="<div style='disply:flex'>
           <p >Hello world</p> <p></p>Hello world</div>"
             // bg={"black"}
-            w="66px"
+            w="32%"
           >
             <PieChart
               data-iscapture="true"

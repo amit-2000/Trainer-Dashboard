@@ -23,7 +23,7 @@ function Dashboard() {
               //   spacing="24px"
               mb="10"
             >
-              <Box w="290px" h="40px" bg="red"></Box>
+              <Box w="290px" h="40px" ></Box>
               <Box w="200px" h="40px">
                 Steps
               </Box>
@@ -33,6 +33,7 @@ function Dashboard() {
               <Box w="200px" h="40px">
                 Nutrition
               </Box>
+              <Box w="200px" h="40px"></Box>
             </Stack>
           </Box>
           <Box>
