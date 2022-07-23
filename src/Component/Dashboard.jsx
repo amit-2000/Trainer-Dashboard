@@ -5,7 +5,11 @@ import User from "./User";
 import Steps from "./Steps";
 import Workout from "./Workout";
 import BellIcon from "./BellIcon";
+import Nutrition from "./Nutrition";
+// import ToolTip from "./Tooltip.tsx";
+import { data } from "./user_data";
 function Dashboard() {
+  console.log(data);
   //   const isLargerThan800 = useMediaQuery("(min-width: 1200px)");
   //   console.log(isLargerThan800);
   return (
@@ -39,7 +43,7 @@ function Dashboard() {
               mb="5"
               //   spacing="24px"
             >
-              <Box w="290px" h="90px" >
+              <Box w="290px" h="90px">
                 <Center h="90px">
                   <User />
                 </Center>
@@ -55,9 +59,11 @@ function Dashboard() {
                 </Center>
               </Box>
               <Box w="200px" h="90px">
-                <Center h="90px">User</Center>
+                <Center h="90px">
+                  <Nutrition />
+                </Center>
               </Box>
-              <Box w="200px" h="90px" >
+              <Box w="200px" h="90px">
                 <Center h="90px">
                   <BellIcon />
                 </Center>

@@ -7,19 +7,20 @@ import {
   Text,
   Flex,
   Image,
-  VStack,
 } from "@chakra-ui/react";
 function User() {
   return (
-    <Box >
-      <Flex>
+    <Box>
+      <Flex >
         <Center>
-          <Image
-            borderRadius="full"
-            boxSize="39.68px"
-            src="https://bit.ly/dan-abramov"
-            alt="Dan Abramov"
-          />
+          <Box >
+            <Image
+              borderRadius="full"
+              boxSize="39.68px"
+              src="https://bit.ly/dan-abramov"
+              alt="Dan Abramov"
+            />
+          </Box>
         </Center>
         <Box textAlign={"left"} alignItems="center" ml="15px">
           <Text fontSize="sm" fontWeight={"600"}>
