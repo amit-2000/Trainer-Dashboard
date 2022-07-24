@@ -29,65 +29,78 @@ const ProgressBar = () => {
     top: "-9px",
   };
 
+  const triangle = {
+    width: "0",
+    height: "0",
+    borderLeft: "7px solid transparent",
+    borderRight: "7px solid transparent",
+    borderBottom: "10px solid ",
+    marginTop: "-20px",
+    marginLeft: "72px",
+  };
+
   return (
     <Box w="200px" p={2} pt={3} bg="gray.700" borderRadius={10}>
-      <Box
-        bg="gray.900"
-        padding={"3px 6px 3px 6px"}
-        borderRadius={"10px"}
-        mb={2}
-      >
-        <Flex justifyContent={"space-between"} mb={1}>
-          <Text fontSize={"12px"} fontWeight="600">
-            PROTEIN
-          </Text>
-          <Text fontSize={"12px"} fontWeight="600">
-            70G
-          </Text>
-        </Flex>
-        <Box style={containerStyles}>
-          <Box style={fillerStyles}>
-            <span style={labelStyles}>{`${40}g`}</span>
+      <Text style={triangle} color="gray.700" justifyContent={"center"}></Text>
+      <Box mt="5px">
+        <Box
+          bg="gray.900"
+          padding={"3px 6px 3px 6px"}
+          borderRadius={"10px"}
+          mb={2}
+        >
+          <Flex justifyContent={"space-between"} mb={1}>
+            <Text fontSize={"12px"} fontWeight="600">
+              PROTEIN
+            </Text>
+            <Text fontSize={"12px"} fontWeight="600">
+              70g
+            </Text>
+          </Flex>
+          <Box style={containerStyles}>
+            <Box style={fillerStyles}>
+              <span style={labelStyles}>{`${40}g`}</span>
+            </Box>
           </Box>
         </Box>
-      </Box>
-      <Box
-        bg="gray.900"
-        padding={"3px 6px 3px 6px"}
-        borderRadius={"10px"}
-        mb={2}
-      >
-        <Flex justifyContent={"space-between"} mb={1}>
-          <Text fontSize={"12px"} fontWeight="600">
-            CARBS
-          </Text>
-          <Text fontSize={"12px"} fontWeight="600">
-            70G
-          </Text>
-        </Flex>
-        <Box style={containerStyles}>
-          <Box style={fillerStyles}>
-            <span style={labelStyles}>{`${40}g`}</span>
+        <Box
+          bg="gray.900"
+          padding={"3px 6px 3px 6px"}
+          borderRadius={"10px"}
+          mb={2}
+        >
+          <Flex justifyContent={"space-between"} mb={1}>
+            <Text fontSize={"12px"} fontWeight="600">
+              CARBS
+            </Text>
+            <Text fontSize={"12px"} fontWeight="600">
+              70g
+            </Text>
+          </Flex>
+          <Box style={containerStyles}>
+            <Box style={fillerStyles}>
+              <span style={labelStyles}>{`${40}g`}</span>
+            </Box>
           </Box>
         </Box>
-      </Box>
-      <Box
-        bg="gray.900"
-        padding={"3px 6px 3px 6px"}
-        borderRadius={"10px"}
-        mb={2}
-      >
-        <Flex justifyContent={"space-between"} mb={1}>
-          <Text fontSize={"12px"} fontWeight="600">
-            FATS
-          </Text>
-          <Text fontSize={"12px"} fontWeight="600">
-            70g
-          </Text>
-        </Flex>
-        <Box style={containerStyles}>
-          <Box style={fillerStyles}>
-            <span style={labelStyles}>{`${40}g`}</span>
+        <Box
+          bg="gray.900"
+          padding={"3px 6px 3px 6px"}
+          borderRadius={"10px"}
+          mb={0}
+        >
+          <Flex justifyContent={"space-between"}>
+            <Text fontSize={"12px"} fontWeight="600">
+              FATS
+            </Text>
+            <Text fontSize={"12px"} fontWeight="600">
+              70g
+            </Text>
+          </Flex>
+          <Box style={containerStyles}>
+            <Box style={fillerStyles}>
+              <span style={labelStyles}>{`${40}g`}</span>
+            </Box>
           </Box>
         </Box>
       </Box>

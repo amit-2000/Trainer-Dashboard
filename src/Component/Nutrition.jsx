@@ -17,11 +17,7 @@ export const Nutrition = () => {
         <Box
           onMouseOver={() => sethover(true)}
           onMouseOut={() => sethover(false)}
-          data-for="main"
-          data-html={true}
-          data-tip="<div style='disply:flex'>
-          <p >Hello world</p> <p></p>Hello world</div>"
-          // bg={"black"}
+         
           w="32%"
         >
           <PieChart
@@ -89,7 +85,7 @@ export const Nutrition = () => {
         display={hover ? "block" : "none"}
         pos={"absolute"}
         mt={1}
-        ml={-2}
+        ml={"-55px"}
         style={{ zIndex: "10" }}
       >
         <ToolTip />
