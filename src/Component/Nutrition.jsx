@@ -3,27 +3,16 @@ import ReactTooltip from "react-tooltip";
 import { Text, Box } from "@chakra-ui/react";
 import { PieChart } from "react-minimal-pie-chart";
 import { Center, HStack, Stack, Flex, Image, VStack } from "@chakra-ui/react";
-import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+// import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-
-const Comp = () => {
-  return <Text>55</Text>;
-};
+import ToolTip from "./Tooltip/Progressbar";
 
 export default class Nutrition extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      place: "bottom",
-      type: "dark",
-      effect: "float",
-      condition: false,
-    };
-  }
+
+  
 
   render() {
-    const { place, type, effect } = this.state;
     return (
       <Box>
         <Flex>
@@ -62,22 +51,10 @@ export default class Nutrition extends Component {
                   </text>
                 </svg>
               )}
-              // labelStyle={{
-              //   // fontSize: "25px",
-              //   // fontFamily: "sans-serif",
-              //   fill: "#E38627",
-              // }}
               labelPosition={0}
             />
           </Box>
 
-          <ReactTooltip
-            id="main"
-            place={place}
-            type={type}
-            effect={effect}
-            multiline={true}
-          />
           <Box>
             <Flex flexDirection={"row"} ml={3}>
               <Box>
@@ -108,36 +85,10 @@ export default class Nutrition extends Component {
             </Flex>
           </Box>
         </Flex>
+        <Box pos={"absolute"} mt={1} ml={-2} style={{ zIndex: "10" }}>
+          <ToolTip />
+        </Box>
       </Box>
     );
   }
-}
-
-{
-  /* <Box
-          data-for="main"
-          data-html={true}
-          data-tip="<div style='disply:flex'>
-          <p>Hello world</p> <p></p>Hello world</div>"
-          // bg={"black"}
-          w="60px"
-        >
-          <PieChart
-            data-iscapture="true"
-            lineWidth={25}
-            radius={50}
-            data={[
-              { value: 30, color: "#E38627" },
-              { value: 25, color: "#C13C37" },
-              { value: 20, color: "#6A2135" },
-            ]}
-          />
-        </Box>
-
-        <ReactTooltip
-          id="main"
-          place={place}
-          type={type}
-          effect={effect}
-          multiline={true}  // /> */
 }

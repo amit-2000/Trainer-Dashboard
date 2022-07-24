@@ -6,8 +6,9 @@ import Steps from "./Steps";
 import Workout from "./Workout";
 import BellIcon from "./BellIcon";
 import Nutrition from "./Nutrition";
-// import ToolTip from "./Tooltip.tsx";
 import { data } from "./user_data";
+      import ToolTip from "./Tooltip/Progressbar";
+
 function Dashboard() {
   console.log(data);
   //   const isLargerThan800 = useMediaQuery("(min-width: 1200px)");
@@ -23,7 +24,7 @@ function Dashboard() {
               //   spacing="24px"
               mb="10"
             >
-              <Box w="290px" h="40px" ></Box>
+              <Box w="290px" h="40px"></Box>
               <Box w="200px" h="40px">
                 Steps
               </Box>
