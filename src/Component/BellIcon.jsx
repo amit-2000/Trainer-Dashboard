@@ -1,7 +1,5 @@
 import React from "react";
-import { Box, Center, HStack, Stack, Text, Flex } from "@chakra-ui/react";
-import LinearProgress from "@mui/material/LinearProgress";
-import ToolTip from "./Tooltip/Progressbar";
+import { Box, Center } from "@chakra-ui/react";
 function BellIcon() {
   return (
     <Center>

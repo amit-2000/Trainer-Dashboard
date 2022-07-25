@@ -1,19 +1,11 @@
 import React from "react";
-import {
-  Box,
-  Center,
-  HStack,
-  Stack,
-  Text,
-  Flex,
-  Image,
-} from "@chakra-ui/react";
-function User() {
+import { Box, Center, Text, Flex, Image } from "@chakra-ui/react";
+const User = ({ user }) => {
   return (
     <Box>
-      <Flex >
+      <Flex>
         <Center>
-          <Box >
+          <Box>
             <Image
               borderRadius="full"
               boxSize="39.68px"
@@ -24,15 +16,15 @@ function User() {
         </Center>
         <Box textAlign={"left"} alignItems="center" ml="15px">
           <Text fontSize="sm" fontWeight={"600"}>
-            Charvie Sharma
+            {user.name}
           </Text>
           <Text fontSize="xs" fontWeight={"400"}>
-            charviesharma.cs@gmail.com
+            {user.email}
           </Text>
         </Box>
       </Flex>
     </Box>
   );
-}
+};
 
 export default User;

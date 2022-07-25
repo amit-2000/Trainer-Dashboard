@@ -1,46 +1,43 @@
-import React, { useState, Component } from "react";
-import ReactTooltip from "react-tooltip";
+import React, { useState } from "react";
 import { Text, Box } from "@chakra-ui/react";
 import { PieChart } from "react-minimal-pie-chart";
-import { Center, HStack, Stack, Flex, Image, VStack } from "@chakra-ui/react";
-// import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+import { Center, Flex } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import ToolTip from "./Tooltip/Progressbar";
 
-export const Nutrition = () => {
+export const Nutrition = ({ user }) => {
   const [hover, sethover] = useState(false);
-  console.log(hover);
   return (
     <Box>
       <Flex>
         <Box
           onMouseOver={() => sethover(true)}
           onMouseOut={() => sethover(false)}
-         
-          w="32%"
+          w="60px"
         >
           <PieChart
             data-iscapture="true"
             lineWidth={22}
             radius={50}
             data={[
-              { value: 30, color: "#E38627" },
-              { value: 25, color: "#C13C37" },
-              { value: 20, color: "#6A2135" },
+              { value: 30, color: "pink" },
+              { value: 25, color: "yellow" },
+              { value: 20, color: "blue" },
             ]}
             // Add font later.
             label={({ x, y, dx, dy, dataEntry }) => (
               <svg fill="white">
                 <text x={x} y={y} dx={dx} dy={dy}>
                   <tspan x={"1.8rem"} font-size={"19px"} font-weight={600}>
-                    2547
+                    {user.calorieIntake}
                   </tspan>
                   <tspan
                     x={"1.6rem"}
                     y={"4.2rem"}
                     font-size={"15px"}
                     font-weight={400}
+                    wordSpacing={2}
                   >
                     calories
                   </tspan>
@@ -74,7 +71,14 @@ export const Nutrition = () => {
             </Box>
 
             <Center>
-              <Box ml={4} w={8} bg="red" pt={5} pb={5} borderRadius="10px">
+              <Box
+                ml={4}
+                w={8}
+                bg="blackAlpha.600"
+                pt={5}
+                pb={5}
+                borderRadius="10px"
+              >
                 <ChevronRightIcon boxSize={6} />
               </Box>
             </Center>
@@ -84,11 +88,11 @@ export const Nutrition = () => {
       <Box
         display={hover ? "block" : "none"}
         pos={"absolute"}
-        mt={1}
+        mt={-0.4}
         ml={"-55px"}
         style={{ zIndex: "10" }}
       >
-        <ToolTip />
+        <ToolTip user={user} />
       </Box>
     </Box>
   );

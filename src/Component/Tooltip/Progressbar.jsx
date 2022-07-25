@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Center, HStack, Stack, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex } from "@chakra-ui/react";
 
-const ProgressBar = () => {
+const ProgressBar = ({ user }) => {
   const containerStyles = {
     height: 13,
     width: "100%",
@@ -13,14 +13,14 @@ const ProgressBar = () => {
   const fillerStyles = {
     height: "100%",
     width: `${50}%`,
-    backgroundColor: "red",
+
     borderRadius: "inherit",
     textAlign: "right",
   };
 
   const labelStyles = {
     padding: 5,
-    color: "white",
+
     fontSize: "10px",
     fontWeight: "400",
     marginRight: "-30px",
@@ -35,14 +35,14 @@ const ProgressBar = () => {
     borderLeft: "7px solid transparent",
     borderRight: "7px solid transparent",
     borderBottom: "10px solid ",
-    marginTop: "-20px",
+    marginTop: "-22px",
     marginLeft: "72px",
   };
 
   return (
     <Box w="200px" p={2} pt={3} bg="gray.700" borderRadius={10}>
       <Text style={triangle} color="gray.700" justifyContent={"center"}></Text>
-      <Box mt="5px">
+      <Box mt="15px">
         <Box
           bg="gray.900"
           padding={"3px 6px 3px 6px"}
@@ -58,8 +58,8 @@ const ProgressBar = () => {
             </Text>
           </Flex>
           <Box style={containerStyles}>
-            <Box style={fillerStyles}>
-              <span style={labelStyles}>{`${40}g`}</span>
+            <Box style={fillerStyles} bg="pink">
+              <span style={labelStyles}>{`${user.proteinConsumed}g`}</span>
             </Box>
           </Box>
         </Box>
@@ -78,7 +78,7 @@ const ProgressBar = () => {
             </Text>
           </Flex>
           <Box style={containerStyles}>
-            <Box style={fillerStyles}>
+            <Box style={fillerStyles} bg="blue">
               <span style={labelStyles}>{`${40}g`}</span>
             </Box>
           </Box>
@@ -98,8 +98,8 @@ const ProgressBar = () => {
             </Text>
           </Flex>
           <Box style={containerStyles}>
-            <Box style={fillerStyles}>
-              <span style={labelStyles}>{`${40}g`}</span>
+            <Box style={fillerStyles} bg="yellow">
+              <span style={labelStyles} color="yellow">{`${40}g`}</span>
             </Box>
           </Box>
         </Box>

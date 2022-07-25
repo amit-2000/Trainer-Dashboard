@@ -2,26 +2,18 @@ import React from "react";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-import {
-  Box,
-  Center,
-  HStack,
-  Stack,
-  Text,
-  Flex,
-  Image,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Center, Text, Flex } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
-function Steps() {
-  const percentage = 66;
+const Steps = ({ user }) => {
   return (
     <Flex>
       <Center>
         <Box w={"65px"}>
-          <CircularProgressbarWithChildren value={55}>
+          <CircularProgressbarWithChildren
+            value={(user.stepsWalked / 4000) * 100}
+          >
             <Text fontSize={"13px"} fontWeight={700}>
-              2547
+              {user.stepsWalked}
             </Text>
             <Text fontSize={"9px"} fontWeight={600} mt="-5px">
               walked
@@ -52,6 +44,6 @@ function Steps() {
       </Box>
     </Flex>
   );
-}
+};
 
 export default Steps;
