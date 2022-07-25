@@ -10,6 +10,23 @@ export const data = [
     scheduleDate: "22 Oct",
     calorieIntake: 2547,
     calorieTarget: 2500,
+    nutrition: [
+      {
+        item: "PROTEIN",
+        consumed: 45,
+        target: 70,
+      },
+      {
+        item: "FATS",
+        consumed: 30,
+        target: 70,
+      },
+      {
+        item: "CARBS",
+        consumed: 50,
+        target: 70,
+      },
+    ],
     proteinConsumed: 45,
     proteinTarget: 70,
     CarbConsumed: 30,
@@ -17,20 +34,36 @@ export const data = [
     fatConsumed: 50,
     fatTarget: 70,
     feedback: true,
-    date: "22 Oct",
   },
   {
     userId: 1,
     name: "Charvie Sharma",
     email: "charviesharma.cs@gmail.com",
     img: "https://bit.ly/dan-abramov",
-    stepsWalked: 1227,
+    stepsWalked: 1089,
     stepsTarget: 4000,
     performedDate: "20 Oct",
     scheduleDate:
       new Date().getDate() +
       " " +
       new Date().toLocaleString("default", { month: "long" }),
+    nutrition: [
+      {
+        item: "PROTEIN",
+        consumed: 30,
+        target: 70,
+      },
+      {
+        item: "FATS",
+        consumed: 40,
+        target: 70,
+      },
+      {
+        item: "CARBS",
+        consumed: 50,
+        target: 70,
+      },
+    ],
     calorieIntake: 3547,
     calorieTarget: 2500,
     proteinConsumed: 45,
@@ -40,7 +73,6 @@ export const data = [
     fatConsumed: 50,
     fatTarget: 70,
     feedback: true,
-    date: Date.now(),
   },
   {
     userId: 1,
@@ -51,6 +83,23 @@ export const data = [
     stepsTarget: 4000,
     performedDate: "24 Oct",
     scheduleDate: "30 Oct",
+    nutrition: [
+      {
+        item: "PROTEIN",
+        consumed: 48,
+        target: 70,
+      },
+      {
+        item: "FATS",
+        consumed: 35,
+        target: 70,
+      },
+      {
+        item: "CARBS",
+        consumed: 25,
+        target: 70,
+      },
+    ],
     calorieIntake: 1547,
     calorieTarget: 2500,
     proteinConsumed: 45,
@@ -60,6 +109,5 @@ export const data = [
     fatConsumed: 50,
     fatTarget: 70,
     feedback: false,
-    date: "24 Oct",
   },
 ];
