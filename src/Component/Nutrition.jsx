@@ -24,12 +24,13 @@ export const Nutrition = ({ user }) => {
     setCalorieTarget(calorieTaeget - 500);
   };
   return (
-    <Box>
+    <Box ml={{sm:1}}>
       <Flex>
         <Box
           onMouseOver={() => sethover(true)}
           onMouseOut={() => sethover(false)}
-          w="60px"
+          // w="60px"
+          w={["60px", "55px", "60px", "65px"]}
         >
           <PieChart
             data-iscapture="true"
@@ -64,7 +65,7 @@ export const Nutrition = ({ user }) => {
         </Box>
 
         <Box>
-          <Flex flexDirection={"row"} ml={3}>
+          <Flex flexDirection={"row"} ml={[1, 2, 3, 4]}>
             <Box>
               <Box
                 bg={"black"}
@@ -97,7 +98,7 @@ export const Nutrition = ({ user }) => {
 
             <Center>
               <Box
-                ml={4}
+                ml={[1, 2, 3, 4]}
                 w={8}
                 bg="blackAlpha.600"
                 pt={5}

@@ -11,21 +11,34 @@ const Workout = ({ user }) => {
     " " +
     new Date().toLocaleString("default", { month: "long" });
   return (
-    <Box>
+    <Box ml={{ sm: -3 }}>
       <Center>
         <Flex>
           <Center>
             <Box>
-              <Box pl={1} pb={0} pt={0} pr={2}>
-                <Flex>
+              <Box
+                pl={1}
+                pb={0}
+                pt={0}
+                pr={2}
+                w={{
+                  xs: 6,
+                }}
+              >
+                <Box display={"flex"}>
                   <HowToRegIcon />
-                  <Text fontSize={"14px"} ml="1">
+                  <Text
+                    //  fontSize={"14px"}
+                    fontSize={["xs", "sm", "sm", "sm"]}
+                    ml="1"
+                    mt={"2px"}
+                  >
                     {user.performedDate}
                   </Text>
-                </Flex>
+                </Box>
               </Box>
               <Box
-                mt={2}
+                mt={1}
                 bg={todayDate === user.scheduleDate ? "red" : ""}
                 borderRadius={"8px"}
                 p={1}
@@ -33,7 +46,11 @@ const Workout = ({ user }) => {
               >
                 <Flex>
                   <PendingActionsIcon />
-                  <Text fontSize={"14px"} ml="1">
+                  <Text
+                    // fontSize={"14px"}
+                    fontSize={["xs", "sm", "sm", "sm"]}
+                    ml="1"
+                  >
                     {user.scheduleDate}
                   </Text>
                 </Flex>
@@ -42,11 +59,11 @@ const Workout = ({ user }) => {
           </Center>
           <Center>
             <Box
-              w={9}
-              ml={4}
+              w={[9, 7, 9, 9]}
+              ml={[1, 2, 3, 4]}
               // bg="blackAlpha.600"
-              pt={5}
-              pb={5}
+              pt={[5, 4, 5, 5]}
+              pb={[5, 4, 5, 5]}
               borderRadius="10px"
               bg={user.feedback === true ? "red" : "blackAlpha.600"}
             >

@@ -10,6 +10,7 @@ function BellIcon() {
         fontWeight="700"
         color="black"
         fontSize={0}
+        ml={{ sm: 1 }}
       >
         <svg
           id="i-bell"

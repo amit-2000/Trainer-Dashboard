@@ -17,9 +17,19 @@ function Dashboard() {
   return (
     <Box bg="gray.800" w="100%" h="590px" p={1} color="white">
       <Center h="100%">
-        <Box bg="blackAlpha.600" borderRadius={"12px"} w="95%" p="10">
-          <Heading />
+        <Box
+          bg="blackAlpha.600"
+          borderRadius={"12px"}
+          width={[
+            "100%", // 0-30em
+            "97%", // 30em-48em
+            "95%", // 48em-62em
+            "93%", // 62em+
+          ]}
+          p={[4, 2, 5, 10]}
+        >
           <Box>
+          <Heading />
             {data.map((user) => {
               return (
                 <Stack
@@ -27,8 +37,20 @@ function Dashboard() {
                   bg="gray.800"
                   borderRadius={"10px"}
                   mb="5"
+                  display={{ sm: "flex" }}
                 >
-                  <Box w="290px" h="90px">
+                  <Box
+                    minW="220px"
+                    // width={[
+                    //   "100%", // 0-30em
+                    //   "100%", // 30em-48em
+                    //   "20vw", // 48em-62em
+                    //   "30vw", // 62em+,
+                    //   "20vw",
+                    //   "15vw"
+                    // ]}
+                    h="90px"
+                  >
                     <Center h="90px">
                       <User user={user} />
                     </Center>
@@ -48,8 +70,8 @@ function Dashboard() {
                       <Nutrition user={user} />
                     </Center>
                   </Box>
-                  <Box w="200px" h="90px">
-                    <Center h="90px">
+                  <Box w={["100%", "100%", "70px", "70px"]} h="90px">
+                    <Center h="90px" mr={3}>
                       <BellIcon />
                     </Center>
                   </Box>

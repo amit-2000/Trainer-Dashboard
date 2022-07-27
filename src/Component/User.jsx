@@ -15,10 +15,18 @@ const User = ({ user }) => {
           </Box>
         </Center>
         <Box textAlign={"left"} alignItems="center" ml="15px">
-          <Text fontSize="sm" fontWeight={"600"}>
+          <Text fontSize={["xs", "xs", "xs", "sm"]} fontWeight={"600"}>
             {user.name}
           </Text>
-          <Text fontSize="xs" fontWeight={"400"}>
+          <Text
+            fontSize="xs"
+            //  fontWeight={"400"}
+            fontWeight={{
+              sm: "400",
+              xs:"300"
+            }}
+            fon
+          >
             {user.email}
           </Text>
         </Box>
