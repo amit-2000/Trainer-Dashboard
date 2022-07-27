@@ -1,19 +1,9 @@
 import React from "react";
 import { Box, Center, Stack } from "@chakra-ui/react";
-// import { useMediaQuery } from "@chakra-ui/react";
-import User from "./User";
-import Steps from "./Steps";
-import Workout from "./Workout";
-import BellIcon from "./BellIcon";
-import Nutrition from "./Nutrition";
-import Heading from "./Heading";
+import { Nutrition, Workout, BellIcon, Heading, User, Steps } from "./index";
 import { data } from "./user_data";
 
 function Dashboard() {
-  // console.log(data);
-  //   const isLargerThan800 = useMediaQuery("(min-width: 1200px)");
-  //   console.log(isLargerThan800);
-
   return (
     <Box bg="gray.800" w="100%" h="590px" p={1} color="white">
       <Center h="100%">
