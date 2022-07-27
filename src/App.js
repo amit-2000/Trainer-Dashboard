@@ -1,8 +1,8 @@
 import "./App.css";
 import Dashboard from "./Component/Dashboard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Nutritioncomp from "./Component/Routes/Nutritioncomp";
-import WorkoutCompo from "./Component/Routes/WorkoutCompo";
+import Nutritioncomp from "./Component/RouterComponent/NutritionRoute";
+import WorkoutCompo from "./Component/RouterComponent/WorkoutRoute";
 function App() {
   return (
     <div className="App">
