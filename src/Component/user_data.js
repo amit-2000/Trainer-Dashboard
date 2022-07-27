@@ -36,7 +36,7 @@ export const data = [
     feedback: true,
   },
   {
-    userId: 1,
+    userId: 2,
     name: "Charvie Sharma",
     email: "charviesharma.cs@gmail.com",
     img: "https://bit.ly/dan-abramov",
@@ -75,7 +75,7 @@ export const data = [
     feedback: true,
   },
   {
-    userId: 1,
+    userId: 3,
     name: "Charvie Sharma",
     email: "charviesharma.cs@gmail.com",
     img: "https://bit.ly/dan-abramov",

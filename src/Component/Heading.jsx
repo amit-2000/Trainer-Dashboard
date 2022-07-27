@@ -10,10 +10,10 @@ function Heading() {
           direction={["column", "row"]}
           mb={1}
           fontSize={["xs", "17px", "lg", "lg"]}
-          fontWeight={[300,600,700,700]}
+          fontWeight={[300, 600, 700, 700]}
         >
           <Box minW="220px" h="40px"></Box>
-          <Box w="200px" h="40px">
+          <Box w={["200px", "200px", "260px", "230px"]} h="40px">
             <Center>
               <Flex justifyContent={"center"} alignItems={"center"}>
                 <BiWalk fontSize={25} />
@@ -21,7 +21,7 @@ function Heading() {
               </Flex>
             </Center>
           </Box>
-          <Box w="200px" h="40px">
+          <Box w={["200px", "200px", "260px", "230px"]} h="40px">
             <Center>
               <Flex justifyContent={"center"} alignItems={"center"}>
                 <FaDumbbell fontSize={25} />
@@ -29,7 +29,7 @@ function Heading() {
               </Flex>
             </Center>
           </Box>
-          <Box w="200px" h="40px">
+          <Box w={["200px", "200px", "180px", "230px"]} h="40px">
             <Center>
               <Flex justifyContent={"center"} alignItems={"center"}>
                 <FaConciergeBell fontSize={25} />

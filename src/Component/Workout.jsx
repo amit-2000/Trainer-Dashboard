@@ -4,6 +4,8 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import { AiOutlineExclamation } from "react-icons/ai";
+import { Link } from "react-router-dom";
+
 const Workout = ({ user }) => {
   console.log(user.scheduleDate);
   const todayDate =
@@ -11,7 +13,7 @@ const Workout = ({ user }) => {
     " " +
     new Date().toLocaleString("default", { month: "long" });
   return (
-    <Box ml={{ sm: -3 }}>
+    <Box ml={{ sm: -2 }}>
       <Center>
         <Flex>
           <Center>
@@ -29,9 +31,9 @@ const Workout = ({ user }) => {
                   <HowToRegIcon />
                   <Text
                     //  fontSize={"14px"}
-                    fontSize={["xs", "sm", "sm", "sm"]}
+                    fontSize={["xs", "sm", "xs", "sm"]}
                     ml="1"
-                    mt={"2px"}
+                    mt={["4px", "4px", "4px", "2px"]}
                   >
                     {user.performedDate}
                   </Text>
@@ -48,7 +50,7 @@ const Workout = ({ user }) => {
                   <PendingActionsIcon />
                   <Text
                     // fontSize={"14px"}
-                    fontSize={["xs", "sm", "sm", "sm"]}
+                    fontSize={["xs", "sm", "xs", "sm"]}
                     ml="1"
                   >
                     {user.scheduleDate}
@@ -58,23 +60,25 @@ const Workout = ({ user }) => {
             </Box>
           </Center>
           <Center>
-            <Box
-              w={[9, 7, 9, 9]}
-              ml={[1, 2, 3, 4]}
-              // bg="blackAlpha.600"
-              pt={[5, 4, 5, 5]}
-              pb={[5, 4, 5, 5]}
-              borderRadius="10px"
-              bg={user.feedback === true ? "red" : "blackAlpha.600"}
-            >
-              {user.feedback ? (
-                <Center>
-                  <AiOutlineExclamation fontSize={"26px"} fontWeight="900" />
-                </Center>
-              ) : (
-                <ChevronRightIcon boxSize={6} />
-              )}
-            </Box>
+            <Link to={`${user.userId}/workout`}>
+              <Box
+                w={[9, 7, 7, 9]}
+                ml={[1, 2, 1.5, 4]}
+                // bg="blackAlpha.600"
+                pt={[5, 4, 4, 5]}
+                pb={[5, 4, 4, 5]}
+                borderRadius="10px"
+                bg={user.feedback === true ? "red" : "blackAlpha.600"}
+              >
+                {user.feedback ? (
+                  <Center>
+                    <AiOutlineExclamation fontSize={"26px"} fontWeight="900" />
+                  </Center>
+                ) : (
+                  <ChevronRightIcon boxSize={6} />
+                )}
+              </Box>
+            </Link>
           </Center>
         </Flex>
       </Center>

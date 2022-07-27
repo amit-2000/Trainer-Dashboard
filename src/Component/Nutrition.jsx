@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Text, Box } from "@chakra-ui/react";
 import { PieChart } from "react-minimal-pie-chart";
 import { Center, Flex } from "@chakra-ui/react";
@@ -24,13 +25,13 @@ export const Nutrition = ({ user }) => {
     setCalorieTarget(calorieTaeget - 500);
   };
   return (
-    <Box ml={{sm:1}}>
+    <Box ml={{ sm: 1 }}>
       <Flex>
         <Box
           onMouseOver={() => sethover(true)}
           onMouseOut={() => sethover(false)}
           // w="60px"
-          w={["60px", "55px", "60px", "65px"]}
+          w={["60px", "55px", "55px", "65px"]}
         >
           <PieChart
             data-iscapture="true"
@@ -95,18 +96,19 @@ export const Nutrition = ({ user }) => {
                 </Center>
               </Box>
             </Box>
-
             <Center>
-              <Box
-                ml={[1, 2, 3, 4]}
-                w={8}
-                bg="blackAlpha.600"
-                pt={5}
-                pb={5}
-                borderRadius="10px"
-              >
-                <ChevronRightIcon boxSize={6} />
-              </Box>
+              <Link to={`${user.userId}/nutrition`}>
+                <Box
+                  ml={[1, 2, 3, 4]}
+                  w={8}
+                  bg="blackAlpha.600"
+                  pt={5}
+                  pb={5}
+                  borderRadius="10px"
+                >
+                  <ChevronRightIcon boxSize={6} />
+                </Box>
+              </Link>
             </Center>
           </Flex>
         </Box>

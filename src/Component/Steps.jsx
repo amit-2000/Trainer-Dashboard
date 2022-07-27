@@ -17,7 +17,7 @@ const Steps = ({ user }) => {
   return (
     <Flex>
       <Center>
-        <Box w={["60px", "55px", "55px", "65px"]}>
+        <Box w={["60px", "50px", "55px", "65px"]}>
           <CircularProgressbarWithChildren
             value={(user.stepsWalked / stepsTaeget) * 100}
           >
@@ -31,10 +31,10 @@ const Steps = ({ user }) => {
         </Box>
       </Center>
       <Box>
-        <Flex flexDirection={"column"} ml={[1, 1, 2, 4]}>
+        <Flex flexDirection={"column"} ml={[1, 1, 3, 4]}>
           <Box
             bg={"black"}
-            w={7}
+            w={[7, 5, 7, 7]}
             borderRadius="6px"
             onClick={() => handleIncrement()}
           >
@@ -43,10 +43,13 @@ const Steps = ({ user }) => {
             </Center>
           </Box>
 
-          <Text fontSize={"sm"} fontWeight={700}>
+          <Text
+            fontSize={["sm", "sm", "xs", "sm"]}
+            fontWeight={[600, 600, 600, 700]}
+          >
             {Math.round((stepsTaeget / 1000) * 10) / 10}K
           </Text>
-          <Text fontSize={"xs"} mt="-6px">
+          <Text fontSize={"10px"} mt="-6px">
             target
           </Text>
           <Box
