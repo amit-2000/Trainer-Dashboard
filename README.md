@@ -3,7 +3,7 @@
 Getting error while Deploying I will fix it soon<br />
 <br />
 Fully Responsive (got stuck on column title :expressionless:) <br />
-Done with all Routing and Button functionalities. <br/>
+Done with all Routing and Button functionalities Tooltip on hover. <br/>
 Build using React/Chakra UI.<br />
 Tried to make same as Figma Design.<br />
 
