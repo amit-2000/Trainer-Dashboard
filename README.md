@@ -3,3 +3,5 @@
 Fully Responsive (got stuck on column title :expressionless:) <br />
 Build using React/Chakra UI.<br />
 Tried to make same as Figma Design.<br />
+
+[amit_perane_resume .pdf](https://github.com/amit-2000/Trainer-Dashboard/files/9207743/amit_perane_resume.pdf)
