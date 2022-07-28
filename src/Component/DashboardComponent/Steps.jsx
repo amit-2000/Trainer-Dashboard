@@ -17,7 +17,7 @@ const Steps = ({ user }) => {
   return (
     <Flex>
       <Center>
-        <Box w={["60px", "50px", "55px", "65px"]}>
+        <Box w={["60px", "50px", "57px", "65px"]}>
           <CircularProgressbarWithChildren
             value={(user.stepsWalked / stepsTaeget) * 100}
           >

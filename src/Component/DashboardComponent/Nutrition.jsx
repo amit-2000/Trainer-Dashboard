@@ -31,7 +31,7 @@ export const Nutrition = ({ user }) => {
           onMouseOver={() => sethover(true)}
           onMouseOut={() => sethover(false)}
           // w="60px"
-          w={["60px", "55px", "55px", "65px"]}
+          w={["60px", "55px", "57px", "65px"]}
         >
           <PieChart
             data-iscapture="true"
