@@ -4,7 +4,7 @@
 
 
 ###### Other details.
- Working on responsiveness (got stuck on column title :expressionless, ) <br />
+ Working on responsiveness <br />
 Done with all Routing, Button functionalities and Tooltip on hover. <br/>
 Build using React/Chakra UI.<br />
 
