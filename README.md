@@ -9,4 +9,4 @@ Build using React/Chakra UI.<br />
 Tried to make same as Figma Design.<br />
 
 ###### Live: https://62e2d419e17c130f5ad241f7--delicate-cheesecake-f8eca6.netlify.app/    <br/>
-[amit_perane_resume .pdf](https://github.com/amit-2000/Trainer-Dashboard/files/9207743/amit_perane_resume.pdf)
+
