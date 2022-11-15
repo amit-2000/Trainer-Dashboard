@@ -4,9 +4,7 @@
 
 ###### Other details.
 Fully Responsive (got stuck on column title :expressionless:) <br />
-Done with all Routing and Button functionalities Tooltip on hover. <br/>
+Done with all Routing, Button functionalities and Tooltip on hover. <br/>
 Build using React/Chakra UI.<br />
-Tried to make same as Figma Design.<br />
 
 ###### Live: https://62e2d419e17c130f5ad241f7--delicate-cheesecake-f8eca6.netlify.app/    <br/>
-
